@@ -24,6 +24,7 @@ public class PlayerController implements InputProcessor {
         keys.put(Keys.RIGHT, false);
         keys.put(Keys.UP, false);
         keys.put(Keys.DOWN, false);
+        keys.put(Keys.QUIT, false);
     }
 
     ;
@@ -187,7 +188,7 @@ public class PlayerController implements InputProcessor {
         keys.put(Keys.RIGHT, false);
         keys.put(Keys.UP, false);
         keys.put(Keys.DOWN, false);
-        //keys.put(Keys.QUIT, false);
+        keys.put(Keys.QUIT, false);
     }
 
 
@@ -212,12 +213,12 @@ public class PlayerController implements InputProcessor {
             _player.setState(Entity.State.WALKING);
             _player.setDirection(Entity.Direction.DOWN, delta);
         }
-        //else if
-        //(keys.get(Keys.QUIT)){
-        //    Gdx.app.exit();
+        else if
+        (keys.get(Keys.QUIT)){
+            Gdx.app.exit();
 
 
-        //}
+        }
         else{      _player.setState(Entity.State.IDLE);    }
         //Mouse input
         if( mouseButtons.get(Mouse.SELECT)) {      mouseButtons.put(Mouse.SELECT, false);
