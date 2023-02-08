@@ -1,7 +1,7 @@
 package com.packtub.libgdx.bludbourne;
 
 
-import com.packtub.libgdx.bludbourne.screens.MainGameScreen;
+import com.packtub.libgdx.bludbourne.MainGameScreen;
 import com.badlogic.gdx.Game;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */

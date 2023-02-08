@@ -59,11 +59,16 @@ public class MainGameScreen implements Screen {
         }
 
     @Override
+    public void dispose() {
+
+    }
+
+    @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        //Preferable to lock and center the _camera to the player’s
-        position  _camera.position.set(_currentPlayerSprite.getX(),     _currentPlayerSprite.getY(), 0f);
+        //Preferable to lock and center the _camera to the player’s position
+        _camera.position.set(_currentPlayerSprite.getX(),     _currentPlayerSprite.getY(), 0f);
         _camera.update();
         _player.update(delta);
         _currentPlayerFrame = _player.getFrame();
@@ -76,6 +81,21 @@ public class MainGameScreen implements Screen {
         _mapRenderer.getBatch().begin();
         _mapRenderer.getBatch().draw(_currentPlayerFrame,     _currentPlayerSprite.getX(), _currentPlayerSprite.getY(),     1,1);
         _mapRenderer.getBatch().end();
+    }
+
+    @Override
+    public void resize(int width, int height) {
+
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
     }
 
     private void setupViewport(int width, int height){
